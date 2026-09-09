@@ -24,17 +24,16 @@ class KategoriController extends Controller
     public function simpan(Request $request)
     {
         $request->validate([
-            'nama' => 'required|string|max:50',
-            'deskripsi' => 'required|string'
+            'nama' => 'required|string|max:50'
         ]);
 
         $kategori = new Kategori();
         $kategori->nama = $request->get('nama');
-        $kategori->deskripsi = $request->get('deskripsi');
         $kategori->save();
 
-        return redirect('daftar-kategori')
+        return redirect('/kategori')
             ->with('success', 'Kategori berhasil disimpan');
+        
     }
 
     public function hapus(Kategori $kategori)
@@ -55,17 +54,16 @@ class KategoriController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'nama' => 'required|string|max:50',
-            'deskripsi' => 'required|string'
+            'nama' => 'required|string|max:50'
         ]);
 
         $kategori = Kategori::find($request->get('id'));
 
         $kategori->nama = $request->get('nama');
-        $kategori->deskripsi = $request->get('deskripsi');
-        $kategori->save();
+         $kategori->save();
 
-        return redirect('daftar-kategori')
+        return redirect('/kategori')
             ->with('success', 'Kategori berhasil diubah!');
-    }
+        }
+        
 }

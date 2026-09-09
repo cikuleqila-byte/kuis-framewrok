@@ -8,7 +8,7 @@ Route::get('/', function () {
     return redirect('daftar-kategori');
 });
 
-Route::get('/daftar-kategori', [KategoriController::class, 'tampil']);
+Route::get('/kategori', [KategoriController::class, 'tampil']);
 Route::get('/kategori/create', [KategoriController::class, 'create']);
 Route::post('/kategori/simpan', [KategoriController::class, 'simpan']);
 Route::get('/kategori/{kategori}/ubah', [KategoriController::class, 'ubah']);

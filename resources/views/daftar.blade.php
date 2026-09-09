@@ -18,21 +18,15 @@
         </div>
     @endif
 
-    <a href="{{ url('/kategori/create') }}">Tambah Kategori</a>
-
-    <br><br>
-
     <table border="1">
         <tr>
             <th>Nama</th>
-            <th>Deskripsi</th>
             <th>Aksi</th>
         </tr>
 
         @foreach ($kategoris as $kategori)
         <tr>
             <td>{{ $kategori->nama }}</td>
-            <td>{{ $kategori->deskripsi }}</td>
             <td>
 
                 <form method="POST" action="{{ url('/kategori/'.$kategori->id) }}">
