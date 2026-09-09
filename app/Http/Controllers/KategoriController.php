@@ -47,7 +47,7 @@ class KategoriController extends Controller
 
     public function ubah(Kategori $kategori)
     {
-        return view('ubah', [
+        return view('kategori.ubah', [
             'kategori' => $kategori
         ]);
     }
