@@ -40,7 +40,7 @@ class KategoriController extends Controller
     {
         $kategori->delete();
 
-        return redirect('daftar-kategori')
+        return redirect('/kategori')
             ->with('success', 'Kategori berhasil dihapus');
     }
 
@@ -65,5 +65,5 @@ class KategoriController extends Controller
         return redirect('/kategori')
             ->with('success', 'Kategori berhasil diubah!');
         }
-        
+
 }
