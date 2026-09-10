@@ -48,7 +48,7 @@ class InformasiController extends Controller
 
         $informasi->save();
 
-        return redirect('daftar-informasi')
+        return redirect('/informasi')
             ->with('success', 'Informasi berhasil disimpan');
     }
 
@@ -84,7 +84,7 @@ class InformasiController extends Controller
 
         $informasi->save();
 
-        return redirect('daftar-informasi')
+        return redirect('/informasi')
             ->with('success', 'Informasi berhasil diubah!');
     }
 
@@ -92,7 +92,7 @@ class InformasiController extends Controller
     {
         $informasi->delete();
 
-        return redirect('daftar-informasi')
+        return redirect('/informasi')
             ->with('success', 'Informasi berhasil dihapus');
     }
 }
